@@ -1,0 +1,128 @@
+
+POST http://localhost:4000/user-api/Register
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"Varun",
+    "password":"Varun",
+    "email":"AshwithReddy@gmail.com"
+}
+###
+POST http://localhost:4000/user-api/Login
+Content-Type: application/json
+
+{
+    "userType":"user",
+    "username":"Ashwith",
+    "password":"Ashwith"
+}
+
+###
+GET http://localhost:4000/user-api/articles
+
+###
+POST http://localhost:4000/author-api/Register
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"Lekhan",
+    "password":"Lekhan",
+    "email":"Lekhan@gmail.com"
+}
+
+###
+POST http://localhost:4000/author-api/Login
+Content-Type: application/json
+
+{
+    "userType":"author",
+    "username":"Lekhan",
+    "password":"Lekhan"
+}
+
+###
+POST http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"{{$timestamp}}",
+    "tittle":"Competative coding",
+    "catagory":"programing",
+    "content":"competitive coding, or competitive programming, is a sport where programmers solve well-defined algorithmic and mathematical problems under time constraints. It is an intellectual challenge that requires coding skills",
+    "dateOfCreation":"{{$datetime iso8601}}",
+    "dateOfModification":"${{$datetime iso8601}}",
+    "username":"Lekhan",
+    "comments":[],
+    "status":true
+}
+###
+PUT http://localhost:4000/author-api/articles
+Content-Type: application/json
+
+{
+    "articleId":"1724403719",
+    "tittle":"Competative coding",
+    "catagory":"programing",
+    "content":"competitive coding, or competitive programming, is a sport where programmers solve well-defined ",
+    "dateOfCreation":"$2024-08-23T09:00:49.577Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"Lekhan",
+    "comments":[],
+    "status":true
+}
+###
+
+
+
+###
+POST http://localhost:4000/admin-api/Register
+Content-Type: application/json
+
+{
+    "userType":"admin",
+    "username":"Spoorthik",
+    "password":"Spoorthik",
+    "email":"Spoorthik@gmail.com"
+}
+
+###
+POST http://localhost:4000/admin-api/Login
+Content-Type: application/json
+
+{
+    "userType":"admin",
+    "username":"Spoorthik",
+    "password":"Spoorthik"
+}
+
+###
+PUT http://localhost:4000/author-api/articles/1724403719
+Content-Type: application/json
+
+{
+    "articleId":"1724403719",
+    "tittle":"Competative coding",
+    "catagory":"programing",
+    "content":"competitive coding, or competitive programming, is a sport where programmers solve well-defined ",
+    "dateOfCreation":"$2024-08-23T09:00:49.577Z",
+    "dateOfModification":"{{$datetime iso8601}}",
+    "username":"Lekhan",
+    "comments":[],
+    "status":false
+}
+###
+POST http://localhost:4000/user-api/comments
+Content-Type: application/json
+
+{
+    "articleId":"1724403719",
+    "username":"Lekhan",
+    "comments":"This is still not giving the explaination I wanted"
+}
+
+
+###
+
+GET http://localhost:4000/author-api/articles/Lekhan

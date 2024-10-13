@@ -1,0 +1,40 @@
+/* Articles.css */
+
+.articles-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  .article-card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+  }
+  
+  .article-title {
+    margin: 0 0 10px 0;
+    color: #333;
+  }
+  
+  .article-content {
+    margin: 0 0 10px 0;
+    color: #666;
+  }
+  
+  .article-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .no-articles {
+    text-align: center;
+    color: #999;
+  }
+  
